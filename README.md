@@ -20,6 +20,12 @@ The `cheatsheet.github.io/` directory contains the generated static site for the
 
 The site is plain HTML, CSS, and JavaScript and can be opened locally or served by any static web server.
 
+When changes are pushed to the `main` branch, the included GitHub Actions workflow publishes this directory to GitHub Pages. For this repository, the default project URL is:
+
+<https://ntarekp.github.io/cyber-tools/>
+
+The site also includes a `CNAME` file for the custom domain <https://cheatsheet.haax.fr>. That domain will work after its DNS records point to GitHub Pages and the custom domain is configured in the repository's **Settings > Pages** section.
+
 ### WaybackPDF
 
 `WaybackPDF/` contains a Python utility that queries the Internet Archive's Wayback Machine and downloads archived PDF files for a domain.
@@ -53,6 +59,15 @@ python3 -m http.server 8000
 ```
 
 Then visit <http://localhost:8000>.
+
+### Enable GitHub Pages
+
+1. Push the repository to GitHub, including `.github/workflows/pages.yml`.
+2. Open the repository's **Settings > Pages** page.
+3. Set the source to **GitHub Actions**.
+4. Push to `main`, or start **Deploy cheatsheet to GitHub Pages** manually from the **Actions** tab.
+
+The workflow publishes only `cheatsheet.github.io/`; the Python utilities remain local command-line applications.
 
 ### Run WaybackPDF
 
