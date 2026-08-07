@@ -24,11 +24,16 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          submodules: recursive
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
         with:
           enablement: true
+
+      - name: Remove custom domain configuration
+        run: rm -f cheatsheet.github.io/CNAME
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
