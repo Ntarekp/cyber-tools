@@ -24,8 +24,12 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+
+      - name: Check out cheatsheet site
+        uses: actions/checkout@v4
         with:
-          submodules: recursive
+          repository: Haax9/cheatsheet.github.io
+          path: cheatsheet.github.io
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
