@@ -24,8 +24,6 @@ When changes are pushed to the `main` branch, the included GitHub Actions workfl
 
 <https://ntarekp.github.io/cyber-tools/>
 
-The site also includes a `CNAME` file for the custom domain <https://cheatsheet.haax.fr>. That domain will work after its DNS records point to GitHub Pages and the custom domain is configured in the repository's **Settings > Pages** section.
-
 ### WaybackPDF
 
 `WaybackPDF/` contains a Python utility that queries the Internet Archive's Wayback Machine and downloads archived PDF files for a domain.
